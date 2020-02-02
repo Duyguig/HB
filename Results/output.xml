@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200202 21:01:16.996" generator="Robot 3.1.2 (Python 2.7.17 on win32)">
+<suite source="C:\Duygu\development\robot-scripts\first-script\Tests\HepsiBurada.robot" id="s1" name="HepsiBurada">
+<test id="s1-t1" name="Scenario 1">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200202 21:01:17.256" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20200202 21:01:19.745" starttime="20200202 21:01:17.256"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200202 21:01:20.867" starttime="20200202 21:01:19.746"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:20.868" starttime="20200202 21:01:17.255"></status>
+</kw>
+<kw name="Visit Webpage" library="HepsiBuradaApp">
+<arguments>
+<arg>${web_page}</arg>
+</arguments>
+<kw name="Visit Webpage" library="StartPage">
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200202 21:01:20.872" level="INFO">Opening url 'http://hepsiburada.com'</msg>
+<status status="PASS" endtime="20200202 21:01:26.359" starttime="20200202 21:01:20.872"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:26.359" starttime="20200202 21:01:20.871"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:26.359" starttime="20200202 21:01:20.869"></status>
+</kw>
+<kw name="Login Webpage" library="HepsiBuradaApp">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Login Webpage" library="Login">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Click Account" library="Login">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=myAccount</arg>
+</arguments>
+<msg timestamp="20200202 21:01:26.362" level="INFO">Clicking element 'id=myAccount'.</msg>
+<status status="PASS" endtime="20200202 21:01:26.957" starttime="20200202 21:01:26.362"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=login</arg>
+</arguments>
+<msg timestamp="20200202 21:01:26.958" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" endtime="20200202 21:01:29.475" starttime="20200202 21:01:26.958"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:29.475" starttime="20200202 21:01:26.361"></status>
+</kw>
+<kw name="Enter Account Info" library="Login">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200202 21:01:29.476" level="INFO">Typing text 'bilsayig@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" endtime="20200202 21:01:29.637" starttime="20200202 21:01:29.476"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200202 21:01:29.638" level="INFO">Typing text 'bilsayig1' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20200202 21:01:29.766" starttime="20200202 21:01:29.637"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200202 21:01:29.767" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" endtime="20200202 21:01:29.838" starttime="20200202 21:01:29.766"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${login_verification_string}</arg>
+</arguments>
+<status status="PASS" endtime="20200202 21:01:34.175" starttime="20200202 21:01:29.838"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:34.175" starttime="20200202 21:01:29.475"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:34.175" starttime="20200202 21:01:26.361"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:34.175" starttime="20200202 21:01:26.359"></status>
+</kw>
+<kw name="Buy Product from Deal Of The Day" library="HepsiBuradaApp">
+<kw name="Select Deal Of The Day Product" library="Product">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${deal_of_the_day_link}</arg>
+</arguments>
+<msg timestamp="20200202 21:01:34.179" level="INFO">Clicking link 'https://www.hepsiburada.com/gunun-firsati-teklifi'.</msg>
+<status status="PASS" endtime="20200202 21:01:38.707" starttime="20200202 21:01:34.178"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="shoppingCart"]</arg>
+</arguments>
+<msg timestamp="20200202 21:01:38.708" level="INFO">Clicking link 'xpath=//*[@id="shoppingCart"]'.</msg>
+<status status="PASS" endtime="20200202 21:01:42.858" starttime="20200202 21:01:38.707"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:42.858" starttime="20200202 21:01:34.178"></status>
+</kw>
+<kw name="Proceed To Payment" library="Product">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id="short-summary"]/div[1]/div[2]/button</arg>
+</arguments>
+<msg timestamp="20200202 21:01:42.859" level="INFO">Clicking button 'xpath=//div[@id="short-summary"]/div[1]/div[2]/button'.</msg>
+<status status="PASS" endtime="20200202 21:01:43.081" starttime="20200202 21:01:42.859"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200202 21:01:48.082" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20200202 21:01:48.082" starttime="20200202 21:01:43.081"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id="short-summary"]//button</arg>
+</arguments>
+<msg timestamp="20200202 21:01:48.083" level="INFO">Clicking button 'xpath://div[@id="short-summary"]//button'.</msg>
+<status status="PASS" endtime="20200202 21:01:48.252" starttime="20200202 21:01:48.083"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:48.252" starttime="20200202 21:01:42.858"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:48.252" starttime="20200202 21:01:34.177"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200202 21:01:50.380" starttime="20200202 21:01:48.254"></status>
+</kw>
+<status status="PASS" endtime="20200202 21:01:50.381" starttime="20200202 21:01:48.253"></status>
+</kw>
+<doc>Selected product shall be bought</doc>
+<tags>
+<tag>Scenario1</tag>
+</tags>
+<status status="PASS" endtime="20200202 21:01:50.382" critical="yes" starttime="20200202 21:01:17.254"></status>
+</test>
+<doc>My first robot test cases</doc>
+<status status="PASS" endtime="20200202 21:01:50.386" starttime="20200202 21:01:16.999"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Scenario1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="HepsiBurada" pass="1">HepsiBurada</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
